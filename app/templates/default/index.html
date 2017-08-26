@@ -1,53 +1,21 @@
 {% extends "layout.html" %}
 
-   
-       {% block menu %}
-       <div class="sidebar-nav">
-        <form class="search form-inline"><input type="text" placeholder="Search..."></form>
-        
-        <a href="/" class="nav-header" ><i class="icon-briefcase"></i>Directory Users</a>
-
-        <a href="#accounts-users" class="nav-header collapsed" data-toggle="collapse"><i class="icon-legal"></i>{{utils[0]['domain']}}<i class="icon-chevron-up"></i></a>
-        <ul id="accounts-users" class="nav nav-list collapse">
-            <li ><a href="/users/">Users</a></li>
-            <li ><a href="#">Groups</a></li>
-        </ul>
-
-        <a href="#accounts-menu" class="nav-header collapsed" data-toggle="collapse"><i class="icon-legal"></i>SMB4 Config<i class="icon-chevron-up"></i></a>
-        <ul id="accounts-menu" class="nav nav-list collapse">
-            <li ><a href="#">Users</a></li>
-            <li ><a href="#">Groups</a></li>
-            <li ><a href="#">Members</a></li>
-        </ul>
-
-    </div>   
-    {% endblock %}
-   
-   
 {% block content %}
 <div class="content">
-	<div id="content">
+    <div id="content">
         <div class="header"><h1 class="page-title">Dashboard</h1></div>
         <ul class="breadcrumb">
             <li><a href="/">Home</a> <span class="divider">/</span></li>
             <li class="active">Dashboard</li>
         </ul>
-</div>
+    </div>
 
-        <div class="container-fluid">
-            <div class="row-fluid">
-        <div class="block-body gallery">
-                <a href="/users/"><i class="icon-gears icon-5x pull-left icon-border"></i></a>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="block-body gallery">
                 <a href="/users/"><i class="icon-group icon-5x pull-left icon-border"></i></a>
-		<a href="#"><i class="icon-desktop icon-5x pull-left icon-border"></i></a>
-                <a href="http://wiki.samba.org/index.php/Samba_AD_DC_HOWTO" target="_blank"><i class="icon-linux icon-5x pull-left icon-border"></i></a>
-                <a href="http://www.linuxpro.com.br/blog/2013/03/instalando-o-samba4-no-opensuse-12-2/" target="_blank"><i class="icon-youtube icon-5x pull-left icon-border"></i></a>
-                <a href="https://github.com/jniltinho/smb4manager" target="_blank"><i class="icon-github icon-5x pull-left icon-border"></i></a>
-                <a href="https://github.com/jniltinho/smb4manager/issues" target="_blank"><i class="icon-bug icon-5x pull-left icon-border"></i></a>
-
-            <div class="clearfix"></div>
-
-
-</div>
-</div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

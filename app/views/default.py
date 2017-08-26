@@ -5,7 +5,7 @@ Licence: GPLv3
 """
 
 
-from flask import Blueprint, render_template,
+from flask import Blueprint, render_template
 from flask import session, redirect, url_for, request, flash, jsonify
 
 #from app import app

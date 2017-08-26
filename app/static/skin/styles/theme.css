@@ -53,6 +53,7 @@ hr {
 }
 .navbar .brand {
   text-shadow: none;
+  margin-left: 0;
 }
 .navbar .navbar-inner {
   background: rgba(71, 71, 71, 0.5);
@@ -94,10 +95,8 @@ hr {
 .content {
   min-width: 400px;
   position: relative;
-  min-height: 587px;
+  height: calc(100vh - 41px);
   background: #fff;
-  margin-left: 240px;
-  margin-top: 5px;
   border-left: 1px solid #000000;
   border-left: 1px solid #111;
 }
@@ -730,4 +729,88 @@ table.table.list tr:first-child td {
   body.http-error {
     font-size: .5em;
   }
+}
+
+.panel-body {
+    background-color: #fbfbfb !important;
+    color: #333 !important;
+    font-size: 12px !important;
+}
+
+
+a [class^="icon-"], a [class*=" icon-"] {
+    display: inline;
+    padding-right: 6px;
+}
+.tabs-header, .tabs-tool {
+    background-color: transparent;
+}
+
+.well {
+    border: none;
+    margin-top: 25px;
+}
+
+.tabs-header, .tabs-scroller-left, .tabs-scroller-right, .tabs-tool, .tabs, .tabs-panels, .tabs li a.tabs-inner, .tabs li.tabs-selected a.tabs-inner, .tabs-header-bottom .tabs li.tabs-selected a.tabs-inner, .tabs-header-left .tabs li.tabs-selected a.tabs-inner, .tabs-header-right .tabs li.tabs-selected a.tabs-inner {
+    border: none !important;
+}
+.tabs-header, .tabs-tool {
+    background-color: transparent;
+}
+
+
+.tabs li a.tabs-inner {
+    background: transparent !important;
+    color: #000 !important;
+}
+
+.tabs li.tabs-selected a.tabs-inner {
+    color: #000 !important;
+}
+.tabs li.tabs-selected {
+    border-bottom: 1px solid black;
+}
+.tabs-header, .tabs-tool {
+    background-color: #fcfcfc !important;
+}
+
+button, .btn {
+    box-shadow: none !important;
+}
+
+.btn {
+ background: #055f00 !important;
+}
+.btn-danger {
+    background: #c20a0a !important;
+}
+
+.window, .window .window-body, .window .panel-title {
+    background: #fff !important;
+    border: none !important;
+    color: #333 !important;
+}
+
+.window .panel-title {
+    padding-left: 5px;
+}
+
+
+.panel-tool a {
+    display: inline-block;
+    width: auto !important;
+    height: 16px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    margin: 0 0 0 0px;
+    vertical-align: top;
+    padding: 0 10px;
+}
+
+.panel-tool-close::after {
+    content: 'x';
+}
+.panel-tool-close {
+    background: none !important;
+    color: #333 !important;
 }

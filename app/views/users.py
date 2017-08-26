@@ -81,8 +81,8 @@ def users_add():
 
         if (rid):
             user = User(username, fullname, description, rid)
-            user.must_change_password = False
-            user.password_never_expires = True
+            user.must_change_password = True
+            user.profile_path = "\\\\files.incampagna.lan\\profiles\\%s" % (username)
             if (not model.UpdateUser(user)): message=model.LastErrorStr; return_error=1
             if (not model.SetPassword(username,password)): message=model.LastErrorStr; return_error=1
             data = [{'MESSAGE': message, 'USER': username, 'REDIRECT': url_redirect, 'ERROR': return_error}]

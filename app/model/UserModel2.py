@@ -117,8 +117,9 @@ class UserModel2():
                self.user  = str(user)
                self.passw = str(passw)
                self.mail  = str(mailaddress)
+               print("CIao")
                try:
-                   res = self.samdb.newuser(self.user, self.passw, mailaddress=self.mail)
+                   res = self.samdb.newuser(self.user, self.passw, True, mailaddress=self.mail, profilepath='\\\\files.incampagna.lan\\profiles\\asdasd')
                except Exception,e:
                       print("Failed to add user '%s': %s" %(self.user, e))
                       return False

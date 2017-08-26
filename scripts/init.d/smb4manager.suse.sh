@@ -45,7 +45,7 @@ case "$1" in
     start)
         echo -n "Starting $DESC daemon"
         cd $APP_ROOT
-        ./runserver.py &
+        python runserver.py &
         # Remember status and be verbose
         rc_status -v
         ;;

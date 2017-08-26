@@ -4,21 +4,21 @@
 <script type="text/javascript">
       $(document).ready(function() {
         $('#change_user').ajaxForm({ beforeSubmit:showRequest, success:showResponse, dataType:'json' });
-	$('#change_pass').ajaxForm({ beforeSubmit:showRequest, success:showResponse, dataType:'json', clearForm:true, resetForm:true });
+    $('#change_pass').ajaxForm({ beforeSubmit:showRequest, success:showResponse, dataType:'json', clearForm:true, resetForm:true });
 
-	function showRequest(formData, jqForm, options) {
+    function showRequest(formData, jqForm, options) {
            $.blockUI({ message: $('.loading'), css: {top:'10px', left:'', right:'10px'} });
            return true;
-	}
+    }
 
-	function showResponse(responseText, statusText, xhr, $form) {
+    function showResponse(responseText, statusText, xhr, $form) {
           $.unblockUI();
           if (responseText.data[0]['ERROR']) {
               bootbox.alert(responseText.data[0]['MESSAGE']);
               return true;
-	  }
+      }
           bootbox.alert(responseText.data[0]['MESSAGE'], function(){ window.location=responseText.data[0]['REDIRECT'];} );
-	}
+    }
 
 // Delete user
 $("#delete_user").on("click",function(e){
@@ -43,7 +43,7 @@ $("#delete_user").on("click",function(e){
 {% endblock %}
    
 
-	{% block menu %}
+    {% block menu %}
        <div class="sidebar-nav">
        <form class="search form-inline"><input type="text" placeholder="Search..."></form>
 
@@ -102,19 +102,14 @@ $("#delete_user").on("click",function(e){
         </div>
         </form>
      </div>  
-        		<div title="Password" style="padding:10px;">  
+                <div title="Password" style="padding:10px;">  
         <form id="change_pass" action="/users/edit/{{user[0]["rid"]}}" method="post">
                 <label>New Password</label>
                 <input name="password" type="password" class="input-xlarge" pattern=".{7,}" title="Minmimum 7, letters and numbers." required="true">
                 <input name="username" type="hidden" value="{{user[0]["samaccountname"]}}">
                 <div><button type="submit" name="submit" value="change_pass" class="btn btn-small"><i class="icon-save"></i> Save</button></div>
         </form>
-        		</div>  
-            <div title="account">Account</div>
-            <div title="profile">Profile</div>
-            <div title="telephones">Telephones</div>
-            <div title="member_of">Member Of</div>
-
+                </div>  
  </div>  
 <!--END TAB CODE =============================== -->
 
